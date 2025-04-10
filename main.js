@@ -17,6 +17,8 @@ datiBigliettoForm.addEventListener("submit", function (event) {
   const name = nameImput.value;
   const distanza = distanzaImput.value;
   const eta = etaImput.value;
+  const code = Math.round(Math.random() * 99999 + 90000) - 90000;
+  const carrozza = Math.round(Math.random() * 9 + 1);
 
   const priceStandard = distanza * 0.21;
   const price40 = priceStandard - (distanza * 0.21 * 40) / 100;
@@ -55,6 +57,8 @@ datiBigliettoForm.addEventListener("submit", function (event) {
   }
   cardPrice.innerText = `${price.toFixed(2) + " €"}`;
   nameCard.innerText = `${name}`;
+  cardCode.innerText = `${code}`;
+  cardCarrozza.innerText = `${carrozza}`;
   //   nameTicket.innerText = `${typeTicket}`;
 
   console.log(price);
