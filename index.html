@@ -10,18 +10,88 @@
       integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
       crossorigin="anonymous"
     />
-    <title>JS dom</title>
+    <title>Biglietto</title>
   </head>
   <body>
     <section class="container container-md container-lg text-center">
-      <div class="row justify-content-md-center m-6">
-        <div class="col justify-content-center align-center">
-          <button type="button" class="btn btn-secondary btn-lg">Spento</button>
-          <img
-            class="lampadinaspenta"
-            src="./img/white_lamp.png"
-            alt="lampadina spenta"
-          />
+      <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+      <div id="errore" class="alert alert-danger d-none" role="alert">
+        Dati non inseriti correttamente
+      </div>
+      <form id="dati-biglietto">
+        <div class="container text-center">
+          <div class="row align-items-start">
+            <div class="col-4">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Nome Cognome</label
+                >
+                <input
+                  type="name"
+                  class="form-control"
+                  id="nomeecognome"
+                  placeholder="Nome Cognome"
+                />
+              </div>
+            </div>
+            <div class="col-4">
+              <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label"
+                  >Km da percorrere</label
+                >
+                <input
+                  type="name"
+                  class="form-control"
+                  id="distanza"
+                  placeholder="Km da percorrere"
+                />
+              </div>
+            </div>
+            <div class="col-4">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Scegli la fascia d'età</label
+              >
+              <select
+                id="eta"
+                class="form-select"
+                aria-label="Default select example"
+              >
+                <option selected>Scegli la fascia d'età</option>
+                <option value="1">Minorenne</option>
+                <option value="2">Maggiorenne</option>
+                <option value="3">Over 65</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <button id="send-inputs" class="btn btn-primary">Invia dati</button>
+      </form>
+      <div class="card mt-4 p-2">
+        <div class="card-body justify-content-center">
+          <h6 class="card-subtitle mb-2 text-body-secondary">
+            Nome Passeggero
+          </h6>
+          <h5 id="card-name" class="card-title">Card title</h5>
+          <div class="container text-center">
+            <div class="row align-items-start pt-3">
+              <div class="col-3">
+                Offerta
+                <div id="card-ticket" class="col">Tipo Ticket</div>
+              </div>
+              <div class="col-3">
+                Carrozza
+                <div id="card-carrozza" class="col">5</div>
+              </div>
+              <div class="col-3">
+                Codice CP
+                <div id="card-code" class="col">92911</div>
+              </div>
+              <div class="col-3">
+                Costo Ticket
+                <div id="card-price" class="col">2,10€</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
