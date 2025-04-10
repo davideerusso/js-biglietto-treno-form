@@ -14,7 +14,7 @@
   </head>
   <body>
     <section class="container container-md container-lg text-center">
-      <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
+      <h2 class="mt-5 mb-4">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
       <div id="errore" class="alert alert-danger d-none" role="alert">
         Dati non inseriti correttamente
       </div>
@@ -57,16 +57,16 @@
                 aria-label="Default select example"
               >
                 <option selected>Scegli la fascia d'età</option>
-                <option value="1">Minorenne</option>
-                <option value="2">Maggiorenne</option>
-                <option value="3">Over 65</option>
+                <option value="minorenne">Minorenne</option>
+                <option value="maggiorenne">Maggiorenne</option>
+                <option value="over65">Over 65</option>
               </select>
             </div>
           </div>
         </div>
         <button id="send-inputs" class="btn btn-primary">Invia dati</button>
       </form>
-      <div class="card mt-4 p-2">
+      <div id="ticket" class="card mt-4 p-2 d-none">
         <div class="card-body justify-content-center">
           <h6 class="card-subtitle mb-2 text-body-secondary">
             Nome Passeggero
